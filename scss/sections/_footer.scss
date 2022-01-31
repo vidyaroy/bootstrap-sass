@@ -1,0 +1,116 @@
+@use'../custom'as*;
+@use'../components/mixin'as*;
+
+.footer {
+  padding-top: 1rem;
+  background-color: $footer;
+}
+
+.contact-box {
+  position: relative;
+
+  &__icon {
+    stroke: $primary;
+    width: 4rem;
+  }
+
+  &__info {
+    padding: 0.4rem;
+
+    &--title {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.4rem;
+
+    }
+
+    &--subtitle {
+      color: $gray-600;
+      font-size: 0.8rem;
+      text-decoration: none;
+      font-weight: 500;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+      }
+    }
+
+  }
+}
+
+// Style The Social Media Content
+
+.footer-sm {
+  a {
+
+    color: $white;
+    i {
+      font-size: 1rem;
+      margin-left: 1rem;
+  
+      @include media-breakpoint-up(sm) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Style The Content For The Company Info
+.company-list {
+  display: block;
+  list-style-type: none;
+  
+  li {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: $black;
+
+  &__copyright {
+    color: $gray-600;
+    font-weight: 400;
+
+    a {
+      color: $gray-300;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Style Back To Top Button
+
+.back-to-top {
+  position: fixed;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  width: 3rem;
+  height: 3rem;
+  
+  i {
+    font-size: 1rem;
+
+    @include absoluteCenter;
+  }
+}
+
